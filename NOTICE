@@ -1,0 +1,9 @@
+chronos2-go
+Copyright 2026 The chronos2-go Authors
+
+This product runs the Chronos-2 forecasting model, created by Amazon, and
+reimplements the forward pass of the chronos-forecasting reference
+implementation (https://github.com/amazon-science/chronos-forecasting).
+Chronos-2, its weights, and chronos-forecasting are
+Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved,
+and are distributed under the Apache License, Version 2.0.

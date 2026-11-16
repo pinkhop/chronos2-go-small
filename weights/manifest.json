@@ -1,0 +1,30 @@
+{
+  "upstream": {
+    "repository": "autogluon/chronos-2-small",
+    "revision": "ddec01313e50b6bc58ebaa92ede81bc24a3d9f9a",
+    "file": "model.safetensors",
+    "sha256": "492290ae82bb89f9769e3479ce90b3179de1f33e600c34daa0352531538b23cd"
+  },
+  "max_shard_bytes": 45000000,
+  "config_sha256": "f2780468adc8b16322aa0b6e28b26476c9401ecf64ab53292b6d2b0d3f423722",
+  "shards": [
+    {
+      "file": "model-00001-of-00003.safetensors",
+      "bytes": 41965760,
+      "sha256": "80dedb3f69f4e5a2e41f715518fbcb2af9deceffcc480b8c00df9852cf8ffb1a",
+      "tensors": 37
+    },
+    {
+      "file": "model-00002-of-00003.safetensors",
+      "bytes": 44058120,
+      "sha256": "89ee514d8f31325ab94f692fea36bfd0a0858b6b43e1efabde0a1b596aed24de",
+      "tensors": 31
+    },
+    {
+      "file": "model-00003-of-00003.safetensors",
+      "bytes": 25725192,
+      "sha256": "2b1c8b8cc79a953ba799857f7fb4863c142776024ce9c84713964ecacc17c1ba",
+      "tensors": 24
+    }
+  ]
+}

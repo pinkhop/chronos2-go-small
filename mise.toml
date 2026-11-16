@@ -1,0 +1,12 @@
+[tools]
+go = "1.27.4"
+"go:github.com/golangci/misspell/cmd/misspell" = "0.8.0"
+"go:github.com/gordonklaus/ineffassign" = "0.2.0"
+"go:github.com/kisielk/errcheck" = "1.30.0"
+"go:github.com/securego/gosec/v2/cmd/gosec" = "2.30.0"
+"go:golang.org/x/tools/cmd/goimports" = "0.52.0"
+"go:golang.org/x/vuln/cmd/govulncheck" = "1.9.0"
+gofumpt = "0.12.0"
+jq = "1.8.2"
+staticcheck = "2026.2.2"
+typos = "1.52.2"
