@@ -44,33 +44,6 @@ Tool versions, including Go itself, are pinned in `mise.toml` and `mise.lock`. R
 Before considering a change complete, run `make format`, `make lint`, `make security`, and `make check`.
 
 
-## Building Against an Unpublished chronos2-go
-
-`go.mod` requires a released `chronos2-go`. To build against a `chronos2-go` checkout instead, as when the two change together before either is published, select a workspace file that lists both. Name it something other than `go.work`, so Go never picks it up implicitly, and keep it outside this repository. For example, create `chronos2.work`, replacing each `/path/to/` placeholder with the absolute path of that checkout on your machine:
-
-```text
-go 1.27.4
-
-use (
-	/path/to/chronos2-go
-	/path/to/chronos2-go-small
-)
-
-replace github.com/pinkhop/chronos2-go v1.0.0 => /path/to/chronos2-go
-```
-
-A workspace module supplies the packages, but Go still reads the `go.mod` of every version a `require` directive names. While the version this repository's `go.mod` requires is unpublished, the workspace must therefore replace that exact version with the checkout, as the `replace` line above does; a replacement without a version is rejected for a workspace module. Match the version to the one `go.mod` requires, and drop the line once that version is published.
-
-Then select it with the `GOWORK` environment variable, which the `Makefile` passes through to every Go command:
-
-```console
-$ export GOWORK=/path/to/chronos2.work
-$ make lint
-```
-
-`chronos2-go`'s `AGENTS.md` ("Working Across Repositories") shows a workspace covering every module of both projects, for running that repository's tests against these weights.
-
-
 ## Hard Constraints
 
 These protect properties that are expensive or impossible to restore once broken.

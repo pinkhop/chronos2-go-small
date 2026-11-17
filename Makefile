@@ -5,10 +5,6 @@
 # description. The listing is generated from the `## target: description`
 # comments below, so a new target documents itself by carrying one.
 #
-# Go commands take the workspace from the GOWORK environment variable, which
-# make passes through unchanged; set it to build against an unpublished
-# chronos2-go checkout (see AGENTS.md). Nothing here names a workspace.
-#
 # Every target is phony; the Go toolchain already does its own staleness
 # tracking. Every tool a target runs comes from PATH. The repository's mise.toml
 # pins each one, together with the Go toolchain, and `mise install` provisions
